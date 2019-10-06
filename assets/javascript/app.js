@@ -27,9 +27,23 @@ $(document).ready(function() {
         rSummary();
         stop();
     });
- 
+    
+    //Create the elements for the result page
+    function rSummary(){
+        var alldone = $('<h2>').html('FINISHED!!!');
+        var canswers = $('<p>').html('Correct Answers: ' + gcount);
+        var wanswers = $('<p>').html('Incorrect Answers: ' + wcount);
+        var cunanswered = $('<p>').html('Unanswered: ' + unanswered);
+        var newclass= $('<div class="col-lg-4 col-lg-offset-4 text-center" id="summary">');
+        newclass.append(alldone);
+        newclass.append(canswers);
+        newclass.append(wanswers);
+        newclass.append(cunanswered);
+        $('.row:nth(2)').append(newclass);
+    }
+    
     function decrement() {
-        //  Decrease number by one on clock
+        //  Decrease number by one on clock.
         number--;
          
          //  Show the number in the #show-number tag.
@@ -55,7 +69,19 @@ $(document).ready(function() {
     
     
     
-   
+    //This function will hide some contents
+    function hide(){
+        $('.form-group').hide();
+        $('#time').hide();
+        $('#done').hide();
+    }
+    
+    //This function will hide some contents
+    function show() {
+        $('.form-group').show();
+        $('#time').show();
+        $('#done').show();
+    }
     
     //Grab all radio buttons to see which answers were correct and which were not.
     $('input[type=radio]').on("change", function() {
