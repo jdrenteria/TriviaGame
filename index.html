@@ -1,31 +1,154 @@
+
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-    <title>Trivia Games</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="./assets/css/style.css">
-
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="assets/css/reset.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <title>Total Nerd Trivia</title>
 </head>
-
 <body>
-    <div class="box">
-        <div class="jumbotron">
-            <h1>Totally Trivial Trivia</h1>
-            <h2>Nerd Edition</h2>
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12 text-center"><h1 class="maintitle">Total Nerd Trivia </h1></div>
+    </div>
+    <div class="row">
+        <div class="col-lg-4 col-lg-offset-4 ">
+            <button type="button" class="btn btn-primary btn-lg btn-block" id="start">START</button>
         </div>
-        <button type="button" class="btn btn-two" id="startgame">START GAME</button>
-        <div class="gamesection">
+        <div class="col-lg-4 col-lg-offset-4 text-center">
+            <p id="time">Time Remaining:<span id="timer"></span></p>
         </div>
     </div>
+
+        <div class="form-group text-center">
+            <p>1. Mario first appeared in which classic video game?</p>
+            <form class="question">
+                <label class="radio-inline">
+                  <input type="radio" name="optradio" class="optradio" value="goodanswer"> Donkey Kong
+                </label>
+                <label class="radio-inline">
+                  <input type="radio" name="optradio" class="optradio" value="wrong">Super Smash Bros
+                </label>
+                <label class="radio-inline">
+                  <input type="radio" name="optradio" class="optradio" value="wrong">Dr.Mario
+                </label>
+                <label class="radio-inline">
+                  <input type="radio" name="optradio" class="optradio" value="wrong">Super Mario Land
+                </label>
+            </form>
+            
+            <p>2. Which game series features cities called Vice City, Liberty City and San Andreas?</p>
+            <form class="question">
+                <label class="radio-inline">
+                  <input type="radio" name="optradio" class="optradio" value="wrong">The Witcher
+                </label>
+                <label class="radio-inline">
+                  <input type="radio" name="optradio" class="optradio" value="wrong">The Last of Us
+                </label>
+                <label class="radio-inline">
+                  <input type="radio" name="optradio" class="optradio" value="goodanswer">Grand Theft Auto
+                </label>
+                <label class="radio-inline">
+                  <input type="radio" name="optradio" class="optradio" value="wrong"> Red Dead Redemption
+                </label>
+            </form>
+
+            <p>3.A knight called Dirk the Daring tries to rescue Princess Daphne from the evil dragon Singe in which laserdisc video game?</p>
+            <form class="question">
+                <label class="radio-inline">
+                  <input type="radio" name="optradio" class="optradio" value="goodanswer">
+                  Dragon’s Lair
+                </label>
+                <label class="radio-inline">
+                  <input type="radio" name="optradio" class="optradio" value="wrong">Castlevania
+                </label>
+                <label class="radio-inline">
+                  <input type="radio" name="optradio" class="optradio" value="wrong">Final Fantasy VII
+                </label>
+                <label class="radio-inline">
+                  <input type="radio" name="optradio" class="optradio" value="wrong">Fire Emblem
+                </label>
+            </form>
+            
+            <p>4.The Umbrella Corporation is a pharmaceutical company in which horror video game franchise?</p>
+            <form class="question">
+                <label class="radio-inline">
+                  <input type="radio" name="optradio" class="optradio" value="goodanswer">Resident Evil
+                </label>
+                <label class="radio-inline">
+                  <input type="radio" name="optradio" class="optradio" value="wrong">Call of Duty
+                </label>
+                <label class="radio-inline">
+                  <input type="radio" name="optradio" class="optradio" value="wrong">Dead Space 
+                </label>
+                <label class="radio-inline">
+                  <input type="radio" name="optradio" class="optradio" value="wrong">Left 4 Dead
+                </label>
+            </form>
+            
+            <p>5.Which was the first Nintendo console to use optical disks?<p>
+            <form class="question">
+                <label class="radio-inline">
+                  <input type="radio" name="optradio" class="optradio" value="wrong">Nintendo DS
+                </label>
+                <label class="radio-inline">
+                  <input type="radio" name="optradio" class="optradio" value="goodanswer">Nintendo GameCube 
+                </label>
+                <label class="radio-inline">
+                  <input type="radio" name="optradio" class="optradio" value="wrong"> Nintendo Switch 
+                </label>
+                <label class="radio-inline">
+                  <input type="radio" name="optradio" class="optradio" value="wrong">Nintendo Wii
+                </label>
+            </form>
+            
+            <p>6.Which is the only video game in which Mario appears as the villain?</p>
+            <form class="question">
+                <label class="radio-inline">
+                  <input type="radio" name="optradio" class="optradio" value="wrong">Donkey Kong 
+                </label>
+                <label class="radio-inline">
+                  <input type="radio" name="optradio" class="optradio" value="wrong">Dr. Mario
+                </label>
+                <label class="radio-inline">
+                  <input type="radio" name="optradio" class="optradio" value="goodanswer">Donkey Kong Jr.
+                </label>
+                <label class="radio-inline">
+                  <input type="radio" name="optradio" class="optradio" value="wrong">Mario Kart 
+                </label>
+            </form>
+            
+            <p>7. Which game features The Nameless King as a boss character?</p>
+            <form class="question">
+                <label class="radio-inline">
+                  <input type="radio" name="optradio" class="optradio" value="wrong">Dead Space 3
+                </label>
+                <label class="radio-inline">
+                  <input type="radio" name="optradio" class="optradio" value="goodanswer">Dark Souls 3
+                </label>
+                <label class="radio-inline">
+                  <input type="radio" name="optradio" class="optradio" value="wrong">Conker's Bad Fur Day
+                </label>
+                <label class="radio-inline">
+                  <input type="radio" name="optradio" class="optradio" value="wrong">Bloodborne 
+                </label>
+            </form>
+        </div>
+    <div class="row">
+        <div class="col-lg-4 col-lg-offset-4">
+            <button type="button" class="btn btn-primary btn-lg btn-block" id="done">DONE</button>
+        </div>
+    </div>
+
+</div><!-- content container -->
+
+<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="assets/javascript/app.js"></script>
 </body>
-
 </html>
-
-<!-- Link style sheets from bootstrap and css.
-Create a box div for the whole page before and after game starts.
-Need tittle for game.
-Need a start button to begin the game.
-Create a seperate div for game material.
--->
